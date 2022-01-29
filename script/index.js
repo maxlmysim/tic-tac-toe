@@ -97,7 +97,10 @@ let playerWin = '';
 let playerTic = 0;
 let playerTac = 0;
 let currentPlayer = true;
+
 const playGround = document.querySelector('.playground');
+const buttonRestart = document.querySelector('.button-restart')
 
 playGround.addEventListener('click', addTicTac);
+buttonRestart.addEventListener('click', restartGame)
 

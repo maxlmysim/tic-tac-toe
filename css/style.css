@@ -9,6 +9,11 @@ body {
     justify-content: space-between;
 }
 
+.title {
+    margin-left: 2vh;
+    font-size: 5vh;
+}
+
 .main__container {
     display: flex;
     align-items: center;
@@ -24,6 +29,11 @@ body {
     height: 5vh;
     width: 13vh;
     border-radius: 2vh;
+    cursor: pointer;
+}
+
+.button-restart-text {
+    font-size: 2.5vh;
 }
 
 .score-container {

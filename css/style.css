@@ -1,19 +1,94 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .main__container {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column
+}
+
+.button-restart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: goldenrod;
+    height: 5vh;
+    width: 13vh;
+    border-radius: 2vh;
+}
+
+.score-container {
+    width: 50vh;
+    display: flex;
+    justify-content: space-between;
 }
 
 .playground {
     border: 2px solid #ffa500;
-   margin: 50px;
-    border-collapse: collapse
+    border-collapse: collapse;
+    margin: 0;
 }
 
 .cell {
-    height: 60px;
-    width: 60px;
-    border: 5px solid #ffa500;
+     position: relative;
+    height: 20vh;
+    width: 20vh;
+    border: 5px solid #000000;
+    margin: 0;
+}
+
+.win-ground {
+    background-color: darkseagreen;
+}
+
+.ground {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tac {
+    display: none;
+    width: 15vh;
+    height: 15vh;
+    border-radius: 50%;
+    border: 10px solid #ffa500
+}
+
+.tic {
+    display: none;
+    height: 20vh;
+    position: relative;
+}
+
+.tic:before, .tic:after {
+    position: absolute;
+    left: -5px;
+    content: '';
+    height: 100%;
+    width: 10px;
+    background-color: #ffa500
+}
+
+.tic:before {
+    transform: rotate(45deg);
+}
+
+.tic:after {
+    transform: rotate(-45deg);
+}
+
+.winner {
+    display:none;
 }
 
 footer {
@@ -30,7 +105,7 @@ footer {
     display: flex;
     justify-content: space-between;
     gap: 10px;
-    height: 60px;
+    height: 8vh;
     width: calc(100% - 60px);
     max-width: 1600px;
     align-items: center
@@ -55,6 +130,6 @@ footer {
 
 .rss-logo {
     fill: #000000;
-    height: 40px;
-    width: 120px;
+    height: 5vh;
+    width: 15vh;
 }

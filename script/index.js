@@ -19,9 +19,9 @@ function addTicTac(event) {
 }
 
 function checkGame() {
-    let winСombinationList = [[[0, 0], [1, 0], [2, 0]], [[0, 1], [1, 1], [2, 1]], [[0, 2], [1, 2], [2, 2]], [[0, 0], [0, 1], [0, 2]], [[1, 0], [1, 1], [1, 2]], [[2, 0], [2, 1], [2, 2]], [[0, 0], [1, 1], [2, 2]], [[2, 0], [1, 1], [0, 2]]];
+    let winList = [[[0, 0], [1, 0], [2, 0]], [[0, 1], [1, 1], [2, 1]], [[0, 2], [1, 2], [2, 2]], [[0, 0], [0, 1], [0, 2]], [[1, 0], [1, 1], [1, 2]], [[2, 0], [2, 1], [2, 2]], [[0, 0], [1, 1], [2, 2]], [[2, 0], [1, 1], [0, 2]]];
 
-    winСombinationList.find((combination) => {
+    winList.find((combination) => {
         let first = playGround.rows[combination[0][0]].cells[combination[0][1]];
         let second = playGround.rows[combination[1][0]].cells[combination[1][1]];
         let third = playGround.rows[combination[2][0]].cells[combination[2][1]];
@@ -76,6 +76,8 @@ function updateScore() {
 
 function restartGame() {
     playerWin = '';
+
+    document.querySelector('.winner-player').textContent = '';
 
     document.querySelectorAll('.cell').forEach((item) => {
         item.classList.remove('win-ground')
